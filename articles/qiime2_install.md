@@ -59,23 +59,3 @@ conda activate qiime2-2020.8
 https://qiita.com/Adaachill/items/6d8e60c1a71bc6d3d0de
 
 
-# qiime2で系統解析を行う
-![](https://docs.qiime2.org/2020.8/_images/overview.png)
-*Qiime2公式ドキュメントより*
-
-## 系統解析を行うために必要なこと
-1. demultiplex
-2. denoise/cluster
-3. feature table を作る
-
-
-# "Moving Pictures" tutorial 
-2011 Caporaso et.alの研究のデータを使って一通りの解析を行う
-データは二人の患者から5つのタイムポイントで体の4箇所から採取したDNAを16s rRNA でアンプリコンシークエンスしたものを使う（プライマーは16s rRNA geneのV4領域、シークエンサーはIllumina Hiseq)
-
-# Qiime2での一通りの解析フロー
-1. サンプルごとに解析用のフォルダを作る
-2. metadataをQiime2用に作成する。作り方については[以下](https://docs.qiime2.org/2020.8/tutorials/metadata/)を参照
-3. 
-
-# Qiime2 fastqをinputにして一通りの解析までをできるようになる
