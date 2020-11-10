@@ -1,5 +1,5 @@
 ---
-title: "Qiime2のインストール"
+title: "Qiime2の概要、インストール"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["bioinfo"]
@@ -35,5 +35,15 @@ tutorial ではfasta を取得した後、それをqzaに保存している
  # インストール
  [2020/10現在の公式ドキュメント](https://docs.qiime2.org/2020.8/)をみながらやっていく
 Nativeに（そのまま）Qiime2をインストールするか、仮想環境（Dockerなど）に入れるかの2択
+Native にconda で仮想環境をset up するのが一番楽そう
 
-めんどくさくなったな。
+# "Moving Pictures" tutorial 
+2011 Caporaso et.alの研究のデータを使って一通りの解析を行う
+データは二人の患者から5つのタイムポイントで体の4箇所から採取したDNAを16s rRNA でアンプリコンシークエンスしたものを使う（プライマーは16s rRNA geneのV4領域、シークエンサーはIllumina Hiseq)
+
+# Qiime2での一通りの解析フロー
+1. サンプルごとに解析用のフォルダを作る
+2. metadataをQiime2用に作成する。作り方については[以下](https://docs.qiime2.org/2020.8/tutorials/metadata/)を参照
+3. 
+
+# Qiime2 fastqをinputにして一通りの解析までをできるようになる
