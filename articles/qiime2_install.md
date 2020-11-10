@@ -37,6 +37,38 @@ tutorial ではfasta を取得した後、それをqzaに保存している
 Nativeに（そのまま）Qiime2をインストールするか、仮想環境（Dockerなど）に入れるかの2択
 Native にconda で仮想環境をset up するのが一番楽そう
 
+## Linuxでのinstall
+1. Linux(Mac,Windows)用のyaml ファイルをダウンロードして、それをもとにcondaで環境を作る
+
+```create_env.sh
+wget https://data.qiime2.org/distro/core/qiime2-2020.8-py36-linux-conda.yml
+conda env create -n qiime2-2020.8 --file qiime2-2020.8-py36-linux-conda.yml#環境の名前は好きに変えてもOKです
+# OPTIONAL CLEANUP
+rm qiime2-2020.8-py36-linux-conda.yml
+```
+
+2. 次にqiime2の環境をconda でactivateする
+```activate_env.sh
+conda activate qiime2-2020.8
+# 終了したい時は
+# conda deactivate
+```
+
+3. エラーハンドリング
+ローカルに環境構築をした際は問題なかったが、スパコン上で実行した際に、conda activate でエラーがでて困ったのでqiitaに記事を書いた
+https://qiita.com/Adaachill/items/6d8e60c1a71bc6d3d0de
+
+
+# qiime2で系統解析を行う
+![](https://docs.qiime2.org/2020.8/_images/overview.png)
+*Qiime2公式ドキュメントより*
+
+## 系統解析を行うために必要なこと
+1. demultiplex
+2. denoise/cluster
+3. feature table を作る
+
+
 # "Moving Pictures" tutorial 
 2011 Caporaso et.alの研究のデータを使って一通りの解析を行う
 データは二人の患者から5つのタイムポイントで体の4箇所から採取したDNAを16s rRNA でアンプリコンシークエンスしたものを使う（プライマーは16s rRNA geneのV4領域、シークエンサーはIllumina Hiseq)
