@@ -9,6 +9,10 @@ published: false
 # Qiime2とは？
 メタゲノム解析でよく用いられるツールです。詳しくは[前回の記事](https://zenn.dev/knk_kei/articles/qiime2_install)を参照して下さい
 
+# Qiime2基本
+データの可視化
+
+
 # Qiime2でできることの概要
 ![](https://docs.qiime2.org/2020.8/_images/overview.png)
 *Qiime2公式ドキュメントより*
@@ -52,4 +56,24 @@ OTU skipping(現在は使われない？)
 2011 Caporaso et.alの研究のデータを使って一通りの解析を行う
 データは二人の患者から5つのタイムポイントで体の4箇所から採取したDNAを16s rRNA でアンプリコンシークエンスしたものを使う（プライマーは16s rRNA geneのV4領域、シークエンサーはIllumina Hiseq)
 
+# Atacama Tutorial
+Pair end の tutorial
+1. qiime dumux でdemultipleする。（casava 形式で既にdemultiplexed されたものを持っている場合はskip)
+2. qiime demux summarize で統計量をみる 
+```
+qiime demux summarize --i-data demux-paired-end.qza --o-visualization demux.qzv
+```
+3. フィルター（opptional)
+統計量からサンプルごとのread数やF,Rのread数が見れる
+それを参考にフィルターをかけるならそれをやる
+ここでmetadata-fileが必要になるんか。exportで自動で生成されるわけではないよね。。
+```sample.sh
+qiime demux filter-samples \
+  --i-demux demux-subsample.qza \
+  --m-metadata-file ./demux-subsample/per-sample-fastq-counts.tsv \
+  --p-where 'CAST([forward sequence count] AS INT) > 100' \
+  --o-filtered-demux demux.qza
+```
 
+seqkit で両端のbp を調べる
+sample_metadataで統一する
