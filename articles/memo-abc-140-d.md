@@ -1,7 +1,7 @@
 ---
 title: "ABC140 D - Face Produces Unhappiness メモ[python]"
 emoji: "✨"
-type: "idea" # tech: 技術記事 / idea: アイデア
+type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python"]
 published: true
 ---

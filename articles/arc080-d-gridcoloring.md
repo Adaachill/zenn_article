@@ -1,7 +1,7 @@
 ---
 title: "ARC080-D-GridColoring 解説[python]"
 emoji: "✨"
-type: "idea" # tech: 技術記事 / idea: アイデア
+type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python","構築"]
 published: true
 ---

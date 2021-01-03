@@ -1,7 +1,7 @@
 ---
 title: "緑dif埋め　AGC043A - Range Flip Find Route解説[python]"
 emoji: "✨"
-type: "idea" # tech: 技術記事 / idea: アイデア
+type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python","数え上げ","木DP"]
 published: true
 ---

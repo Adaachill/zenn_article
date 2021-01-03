@@ -1,7 +1,7 @@
 ---
 title: "木DPの練習1　ABC036 D - 塗り絵 メモ[python]"
 emoji: "✨"
-type: "idea" # tech: 技術記事 / idea: アイデア
+type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python","数え上げ","木DP"]
 published: true
 ---
