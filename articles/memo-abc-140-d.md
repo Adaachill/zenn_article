@@ -6,11 +6,25 @@ topics: ["atcoder","競プロ","python"]
 published: true
 ---
 
+# URL
+https://atcoder.jp/contests/abc140/tasks/abc140_d
+
 # 問題概要
 一列にN人が並んでいる。それぞれ右か左を向いている。
 目の前の人が自分で同じ方向を向いている時、その人は幸せとする。
 l,l+1,...,r番目の人の列を反転させるという動作をk 回まで行える時
 幸福な人の数は最大で何人にできるか？
+
+# 提出コード
+```python
+n, k = map(int, input().split())
+s = input()
+a = 0
+for i in range(len(s) - 1):
+    if s[i] != s[i + 1]:
+        a += 1
+print(len(s) - 1 - max(0, a - 2 * k))
+```
 
 # 考察
 一回の反転で最大になるようなl,rを選ぶことは出来そうなものの複数回行える時の最大はわからずケンちょんさんの解説ブログをみた
@@ -37,17 +51,6 @@ l,l+1,...,r番目の人の列を反転させるという動作をk 回まで行�
 - 文字列中のLとRの変わり目の個数 a を数える
 - 最大 a　は2*k まで減らすことができる。
   - a = 1で操作可能な時は0にすることも可能
-
-# 提出コード
-```python
-n, k = map(int, input().split())
-s = input()
-a = 0
-for i in range(len(s) - 1):
-    if s[i] != s[i + 1]:
-        a += 1
-print(len(s) - 1 - max(0, a - 2 * k))
-```
 
 # メモ
 - 操作を最大k 回まで行える系の問題の解き方（今回はgreedy）
