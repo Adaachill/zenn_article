@@ -1,5 +1,5 @@
 ---
-title: "木DPの練習　ABC036 D - 塗り絵 メモ[python]"
+title: "木DPの練習1　ABC036 D - 塗り絵 メモ[python]"
 emoji: "✨"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python","数え上げ","木DP"]
@@ -75,7 +75,7 @@ print((dp_white[0] + dp_black[0])%mod)
     - 初期値は全ノードはblakc,white共に1になる
 
 # 次回への反省
-- 考察を詰めて実装してACするまでに30min かかったので反省
+- 考察を詰めた後、実装してACするまでに30min かかったので反省
   - 漸化式が間違っていた
     - dp_black,dp_whiteはそれぞれ子ノードの積和（総乗）として表すことができる（総和かと思っていたが独立にとることができるので積になる）
     - 漸化式が間違っていたので初期値も変更(全ノード1でいい)
