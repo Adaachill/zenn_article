@@ -3,7 +3,7 @@ title: "DDDC2020 予選 C - Strawberry Cakes解説[python]"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python","構築"]
-published: false
+published: true
 ---
 
 # URL

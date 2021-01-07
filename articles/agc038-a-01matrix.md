@@ -3,7 +3,7 @@ title: "AGC038 01Matrix解説[python]"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python","幾何","構築"]
-published: true
+published: false
 ---
 
 # URL
