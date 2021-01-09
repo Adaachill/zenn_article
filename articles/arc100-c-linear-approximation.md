@@ -18,6 +18,15 @@ N<=2*10**5
 
 # 提出コード
 ```python
+n = int(input())
+a = list(map(int, input().split()))
+for i in range(n):
+    a[i] -= i + 1
+a.sort()
+median = a[n // 2]
+ans = sum(abs(i - median) for i in a)
+print(ans)
+
 ```
 
 # 考察
