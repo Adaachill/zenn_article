@@ -1,5 +1,5 @@
 ---
-title: "解説[python]"
+title: "ABC181 E Transformable Teacher解説[python]"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python",]
@@ -7,8 +7,7 @@ published: true
 ---
 
 # URL
-https://atcoder.jp/contests/agc048/tasks/agc048_a
-
+https://atcoder.jp/contests/abc181/tasks/abc181_e
 # 制約
 $$ 1 <= N,M <= 2*10^{5} $$
 1 <= Hi,Wi <= 10^{9} $$
