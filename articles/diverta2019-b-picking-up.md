@@ -76,5 +76,8 @@ if __name__ == "__main__":
 
 # 次回への反省
 - Nが小さいからNaive にまず考える
+- 辞書でx*10**9 + y とかをkey にしてvalue を回数とかにしてもてばO(nC2)でいけそう。
 
 # 参考
+https://ami-atcoder.hatenablog.com/entry/20190617/1560747446
+pythonってタプルをkey に持てるんだ。。
