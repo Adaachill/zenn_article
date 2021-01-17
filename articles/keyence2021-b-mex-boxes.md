@@ -1,8 +1,8 @@
 ---
-title: "解説[python]"
+title: "Keyence2021 B - Mex Boxes解説[python]"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["atcoder","競プロ","python",]
+topics: ["atcoder","競プロ","python","ヒストグラム"]
 published: true
 ---
 
