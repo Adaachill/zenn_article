@@ -3,7 +3,7 @@ title: "Keyence2021 C - Robot on Grid解説[python]"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python",]
-published: false
+published: true
 ---
 
 # URL
@@ -23,7 +23,51 @@ $$ 1 <= wi<= W $$
 - R ならj+1 , Dならi+1に移動。X なら両方いける
 # 提出コード
 ```python
+def xgcd(a, b):
+    x0, y0, x1, y1 = 1, 0, 0, 1
+    while b != 0:
+        q, a, b = a // b, b, a % b
+        x0, x1 = x1, x0 - q * x1
+        y0, y1 = y1, y0 - q * y1
+    return a, x0, y0
 
+def modinv(a, m):
+    g, x, y = xgcd(a, m)
+    if g != 1:
+        raise Exception('modular inverse does not exist')
+    else:
+        return x % m
+
+h, w, k = map(int, input().split())
+dp = [[0] * (w + 2) for _ in range(h + 2)]
+grid = [[0] * (w + 2) for _ in range(h + 2)]
+for i in range(k):
+    p, q, r = map(str, input().split())
+    p = int(p) - 1
+    q = int(q) - 1
+    if r == 'X': grid[p + 1][q + 1] = 1
+    if r == 'R': grid[p + 1][q + 1] = 2
+    if r == 'D': grid[p + 1][q + 1] = 3
+mod = 998244353
+inv3 = modinv(3,mod)
+
+dp[1][1] = 1
+for i in range(1, h + 1):
+    for j in range(1, w + 1):
+        if grid[i][j] == 1:
+            dp[i + 1][j] += dp[i][j]
+            dp[i][j + 1] += dp[i][j]
+        elif grid[i][j] == 2:
+            dp[i][j + 1] += dp[i][j]
+        elif grid[i][j] == 3:
+            dp[i + 1][j] += dp[i][j]
+        else:  # 空白文字
+            dp[i + 1][j] += 2 * inv3 * dp[i][j]
+            dp[i][j + 1] += 2 * inv3 * dp[i][j]
+        dp[i + 1][j] %= mod
+        dp[i][j + 1] %= mod
+# print(dp)
+print(int(dp[h][w] * pow(3, h * w - k, mod)) % mod)
 ```
 
 # 考察
@@ -46,10 +90,14 @@ $$ 1 <= wi<= W $$
 
 # 実装方針
 - 3で割り続けるので、初期値をどうするかがきも
-- 初期値を1にして計算するとTLE。。
-- 
+  - modinv 逆元を使う。
 
 # 次回への反省
-- 
+- 結局が逆元がわからなくて友人に聞いて解いたので解説AC
+- https://atcoder.jp/contests/keyence2021/submissions/19492572　
+Pyton3.8以降だとpow(a,-1,mod)で逆元を計算することができるが、それだと速度的に間に合わないので
+- https://atcoder.jp/contests/keyence2021/submissions/19492601
+自分で逆元を計算してPypyで提出する
+- 今回のような(5000*5000とか）大きい範囲の文字列のgridを持つときは、数字に置き換えた方が良い。
 
 # 参考
