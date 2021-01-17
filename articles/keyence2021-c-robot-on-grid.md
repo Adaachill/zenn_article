@@ -43,11 +43,11 @@ dp = [[0] * (w + 2) for _ in range(h + 2)]
 grid = [[0] * (w + 2) for _ in range(h + 2)]
 for i in range(k):
     p, q, r = map(str, input().split())
-    p = int(p) - 1
-    q = int(q) - 1
-    if r == 'X': grid[p + 1][q + 1] = 1
-    if r == 'R': grid[p + 1][q + 1] = 2
-    if r == 'D': grid[p + 1][q + 1] = 3
+    p = int(p)
+    q = int(q)
+    if r == 'X': grid[p][q] = 1
+    if r == 'R': grid[p][q] = 2
+    if r == 'D': grid[p][q] = 3
 mod = 998244353
 inv3 = modinv(3,mod)
 
@@ -99,5 +99,8 @@ Pyton3.8以降だとpow(a,-1,mod)で逆元を計算することができるが�
 - https://atcoder.jp/contests/keyence2021/submissions/19492601
 自分で逆元を計算してPypyで提出する
 - 今回のような(5000*5000とか）大きい範囲の文字列のgridを持つときは、数字に置き換えた方が良い。
+- 番兵をおくなら1-index そのまま受け取ると良い
 
 # 参考
+https://tex2e.github.io/blog/crypto/modular-mul-inverse　
+python3でのモジュラ逆数の求め方
