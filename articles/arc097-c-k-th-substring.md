@@ -63,7 +63,30 @@ while k > 0:
 - 愚直な実装に苦手意識がある
 - 短期記憶がくそなので、筋肉実装の時、イメージが湧かず、適当に書いてしまう
   - できるだけ全探索などの複雑な分岐を書かなくても良いように設計する。
-- python setだとソートされる訳ではない。（入り方はランダム？）
+- python setだとソートされる訳ではない。（入り方は下位bitでのhash値？）
+- 計算量を考えると、長さ5以下の部分文字列を全てリストに入れてソートしても解ける。リストに入るのは |s|*5 程度なので、|s|をNとしてO(NlogN) となる。(コメントを受けて追記：ありがとうございます。)
+
+```python
+s = input()
+l = len(s)
+k = int(input())
+substring_all = []
+for i in range(l):
+    for j in range(5):
+        substring_all.append(s[i : i + j + 1])
+substring_all.sort()
+pre = ""
+idx = 0
+while k > 0:
+    if substring_all[idx] != pre:
+        k -= 1
+        pre = substring_all[idx]
+    idx += 1
+    if k == 0:
+        print(pre)
+        exit()
+
+```
 
 # 参考
 https://teratail.com/questions/271942
