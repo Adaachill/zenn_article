@@ -11,3 +11,13 @@
 - 逆になんで今ままで緑に甘んじていたのか不明
 - メンタルとちゃんとコンディションを整えて参加することが大事
 - 早めに自己最高レートを更新して水色になりたい
+
+# 途中経過メモ
+1/20 残り５問
+	A. 01 Matrix	◉ AtCoder Grand Contest 038
+  F. Range Xor Query	◉ AtCoder Beginner Contest 185
+  E. Coprime	◉ AtCoder Beginner Contest 177
+  C. Exoswap	◉ 鹿島建設プログラミングコンテスト2020（AtCoder Regular Contest 110）
+  C. Large RPS Tournament	◉ AtCoder Regular Contest 109
+で　Range Xor はセグ木を貼るだけらしいので後に回す
+RPS が一番とけそう
