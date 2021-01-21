@@ -1,5 +1,5 @@
 ---
-title: "ABC185 F - Range Xor Query解説[python]"
+title: "ARC109 C - Large RPS Tournament解説[python]"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python","巡回"]
