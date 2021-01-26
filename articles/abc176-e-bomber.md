@@ -3,7 +3,7 @@ title: "ABC176 E - Bomber解説[python]"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python","adhoc"]
-published: false
+published: true
 ---
 
 # URL
