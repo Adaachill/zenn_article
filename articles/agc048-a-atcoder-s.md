@@ -3,7 +3,7 @@ title: "AGC048 A - atcoder < S解説[python]"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python","貪欲"]
-published: false
+published: true
 ---
 
 # URL
@@ -18,7 +18,21 @@ $$ 1 <= |S| <= 1000$$
 
 # 提出コード
 ```python
-
+t = int(input())
+for i in range(t):
+    s = input()
+    l = len(s)
+    ans = -1
+    for i in range(l):
+        if s[i] != "a":
+            if s[i] > "t":
+                ans = max(1, i - 1)
+            else:
+                ans = i
+            break
+    if s > "atcoder":
+        ans = 0
+    print(ans)
 ```
 
 # 考察
@@ -40,6 +54,6 @@ $$ 1 <= |S| <= 1000$$
   - return min(k,j+ans(i+1,S',k-j))
 
 # 次回への反省
-- 
+- 結局再帰でかけなくてfor ループにして変数を更新していく形で書いた
 
 # 参考
