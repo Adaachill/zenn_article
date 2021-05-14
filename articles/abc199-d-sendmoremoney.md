@@ -3,7 +3,7 @@ title: "ABC198 D Send More Money[python]"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python","全探索","premutation"]
-published: false
+published: True
 ---
 
 # URL
