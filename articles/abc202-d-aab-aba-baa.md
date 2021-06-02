@@ -18,6 +18,44 @@ K はありうる総数以下
 
 # 提出コード
 ```python
+a, b, k = map(int, input().split())
+ans = ""
+
+
+def comb(a, b):
+    """return combination aCb
+
+    Args:   
+        a ([int]]): 
+        b ([type]): 
+    Computation Complexity:
+        O(b)
+    """
+    numerator = 1
+    denomirator = 1
+    for i in range(b):
+        numerator *= a-i
+        denomirator *= b-i
+    return numerator//denomirator
+
+
+exist_a = a
+exist_b = b
+for i in range(a+b):
+    if exist_a == 0:
+        ans += "b"*exist_b
+        break
+    if exist_b == 0:
+        ans += "a"*exist_a
+        break
+    if k <= comb(exist_a+exist_b-1, exist_a-1):
+        ans += "a"
+        exist_a -= 1
+    else:
+        k -= comb(exist_a+exist_b-1, exist_a-1)
+        ans += "b"
+        exist_b -= 1
+print(ans)
 
 ```
 
