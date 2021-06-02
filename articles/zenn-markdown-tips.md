@@ -8,7 +8,8 @@ published: true
 
 # 執筆時の環境的なこと
 - 基本的にはローカルのエディタを使って執筆する
-https://zenn.dev/zenn/articles/editor-guide
+
+@[card](https://zenn.dev/zenn/articles/editor-guide)
 - 記事のpreviewをする際にはターミナルで `npx zenn preview` を実行してブラウザ上で確認する
 
 # 数式の記述
@@ -22,3 +23,6 @@ https://katex.org/docs/supported.html
 # その他
 - 注釈は`[^1]`で文中に入れ込み、文末に`[^1]:内容`の形式で記述するか、インラインで`[脚注の内容その2]`のように書くこともできる
 - 区切り線 - 5つで区切り線になる`-----`
+
+参考：
+https://zenn.dev/zenn/articles/markdown-guide
