@@ -2,7 +2,7 @@
 title: "ARC120 Swap2[python]"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["atcoder","競プロ","python",]
+topics: ["atcoder","競プロ","python","BIT","転倒数"]
 published: true
 ---
 

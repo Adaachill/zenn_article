@@ -1,5 +1,5 @@
 ---
-title: "解説[python]"
+title: "[python]"
 emoji: "✨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["atcoder","競プロ","python",]
