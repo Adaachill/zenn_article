@@ -11,8 +11,12 @@ published: true
  - Mac なら`~/Library/Application\ Support/Code/User/snippets/言語.json` にこの形で各言語ごとのsnippetsがあるのでそこから編集する
  - Shortcut(Macならcommand + Shift + P) でも開ける
 
-# プロジェクトに反映されるには
-
+# プロジェクトごとに反映されるには
+- プロジェクト内の`.vscode` ディレクトリに作って反映させることができる
 
 参考：
 @[card](https://qiita.com/282Haniwa/items/82828c6a566e3e7e047d)
+
+# 余談：snippet generator
+@[card](https://snippet-generator.app/)
+が便利。各種のエディタに合わせた形式のsnippetを簡単に作成してくれるので、これで作成して`.json`に貼り付けると楽
