@@ -9,7 +9,7 @@ published: true
 # 全体的なsnippetsの場所
 - `Code/User/snippets/`ディレクトリ以下に各言語ごとのsnippetを記述したjsonファイルをおく
  - Mac なら`~/Library/Application\ Support/Code/User/snippets/言語.json` にこの形で各言語ごとのsnippetsがあるのでそこから編集する
- - Shortcut(Macならcommand + Shift + P) でも開ける
+ - Shortcut(Macならcommand + Shift + P) から `Preference:Configure User Snippets` から対象の言語を選んでjsonファイルを開くこともできる
 
 # プロジェクトごとに反映されるには
 - プロジェクト内の`.vscode` ディレクトリに作って反映させることができる
